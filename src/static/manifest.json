@@ -4,20 +4,16 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "themeDetectorIcon.png",
+    "48": "themeDetectorIcon.png",
+    "128": "themeDetectorIcon.png"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "React Extension",
-    "default_icon": "icon.png"
+    "default_title": "Theme Detector",
+    "default_icon": "themeDetectorIcon.png"
   },
-  "permissions": ["storage"],
-  "options_page": "options.html",
-  "background": {
-    "service_worker": "background.js"
-  },
+  "permissions": ["activeTab", "scripting"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
