@@ -4,7 +4,7 @@ import "./popup.css";
 import { Container, Typography } from "@mui/material";
 
 const App: React.FC<{}> = () => {
-  const [themeName, setThemeName] = useState<string>("");
+  const [themeName, setThemeName] = useState<string>("Not Previewing a Theme");
 
   useEffect(() => {
     chrome.tabs.query(
