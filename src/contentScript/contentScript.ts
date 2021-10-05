@@ -11,12 +11,6 @@ if (frame) {
   });
 }
 
-chrome.runtime.onMessage.addListener(function (request, sender, response) {
-  if (request.message === "not found") {
-    chrome.action.disable(sender.tab.id);
-  }
-});
-
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   console.log("Message Received", request);
   if (request.from === "popup") {
